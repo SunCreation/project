@@ -1,0 +1,22 @@
+
+
+
+
+
+
+
+
+
+
+ 17%|██████▌                                | 18/106 [00:19<01:34,  1.07s/it]Traceback (most recent call last):
+  File "2test.py", line 72, in <module>
+    output = trainer.train()
+  File "/opt/conda/lib/python3.8/site-packages/transformers/trainer.py", line 1365, in train
+    tr_loss_step = self.training_step(model, inputs)
+  File "/opt/conda/lib/python3.8/site-packages/transformers/trainer.py", line 1958, in training_step
+    loss.backward()
+  File "/opt/conda/lib/python3.8/site-packages/torch/_tensor.py", line 255, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/opt/conda/lib/python3.8/site-packages/torch/autograd/__init__.py", line 147, in backward
+    Variable._execution_engine.run_backward(
+KeyboardInterrupt

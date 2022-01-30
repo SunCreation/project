@@ -1,0 +1,24 @@
+{
+    "os": "Linux-5.4.120+-x86_64-with-glibc2.10",
+    "python": "3.8.10",
+    "heartbeatAt": "2022-01-29T16:26:06.797645",
+    "startedAt": "2022-01-29T16:26:03.942498",
+    "docker": null,
+    "gpu": "Tesla T4",
+    "gpu_count": 1,
+    "cpu_count": 2,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "2test.py",
+    "codePath": "test/2test.py",
+    "git": {
+        "remote": "https://github.com/SunCreation/project.git",
+        "commit": "44f63b9297db7e0749e1922383158cfd4d4d6995"
+    },
+    "email": null,
+    "root": "/workspace/project",
+    "host": "filffzmsogbryixcdydkueeh-5ddbb85cf7-hqz5s",
+    "username": "root",
+    "executable": "/opt/conda/bin/python3"
+}

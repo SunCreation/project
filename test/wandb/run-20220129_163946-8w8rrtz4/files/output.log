@@ -1,0 +1,110 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 99%|███████████████████████████████████████▋| 316/318 [02:45<00:01,  1.91it/s]
+100%|████████████████████████████████████████| 318/318 [02:46<00:00,  2.38it/s]***** Running Evaluation *****
+  Num examples = 282
+  Batch size = 1
+
+
+
+
+
+
+
+
+  File "2test.py", line 72, in <module>      | 135/282 [00:18<00:38,  3.84it/s]
+    output = trainer.train()
+  File "/opt/conda/lib/python3.8/site-packages/transformers/trainer.py", line 1455, in train
+    self._maybe_log_save_evaluate(tr_loss, model, trial, epoch, ignore_keys_for_eval)
+  File "/opt/conda/lib/python3.8/site-packages/transformers/trainer.py", line 1565, in _maybe_log_save_evaluate
+    metrics = self.evaluate(ignore_keys=ignore_keys_for_eval)
+  File "/opt/conda/lib/python3.8/site-packages/transformers/trainer.py", line 2208, in evaluate
+    output = eval_loop(
+  File "/opt/conda/lib/python3.8/site-packages/transformers/trainer.py", line 2394, in evaluation_loop
+    preds_host = logits if preds_host is None else nested_concat(preds_host, logits, padding_index=-100)
+  File "/opt/conda/lib/python3.8/site-packages/transformers/trainer_pt_utils.py", line 108, in nested_concat
+    return torch_pad_and_concatenate(tensors, new_tensors, padding_index=padding_index)
+  File "/opt/conda/lib/python3.8/site-packages/transformers/trainer_pt_utils.py", line 70, in torch_pad_and_concatenate
+    return torch.cat((tensor1, tensor2), dim=0)
+RuntimeError: CUDA out of memory. Tried to allocate 5.60 GiB (GPU 0; 14.76 GiB total capacity; 7.49 GiB already allocated; 5.57 GiB free; 7.77 GiB reserved in total by PyTorch)

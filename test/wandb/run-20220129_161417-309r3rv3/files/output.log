@@ -1,0 +1,98 @@
+
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Using custom data configuration default-c30907fc16e79295
+Reusing dataset csv (/root/.cache/huggingface/datasets/csv/default-c30907fc16e79295/0.0.0/6b9057d9e23d9d8a2f05b985917a0da84d70c5dae3d22ddd8a3f22fb01c69d9e)
+100%|██████████████████████████████████████████| 3/3 [00:00<00:00,  5.22ba/s]
+100%|██████████████████████████████████████████| 1/1 [00:00<00:00,  6.62ba/s]
+/opt/conda/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use thePyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+***** Running training *****
+  Num examples = 2115
+  Num Epochs = 2
+  Instantaneous batch size per device = 20
+  Total train batch size (w. parallel, distributed & accumulation) = 20
+  Gradient Accumulation steps = 1
+  Total optimization steps = 212
+Automatic Weights & Biases logging enabled, to disable set os.environ["WANDB_DISABLED"] = "true"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 50%|██████████████████▊                   | 105/212 [02:05<02:09,  1.21s/it]
+ 50%|███████████████████                   | 106/212 [02:06<01:59,  1.13s/it]***** Running Evaluation *****
+  Num examples = 705
+  Batch size = 10
+
+  File "2test.py", line 72, in <module>      | 12/71 [00:03<00:21,  2.73it/s]
+    output = trainer.train()
+  File "/opt/conda/lib/python3.8/site-packages/transformers/trainer.py", line 1455, in train
+    self._maybe_log_save_evaluate(tr_loss, model, trial, epoch, ignore_keys_for_eval)
+  File "/opt/conda/lib/python3.8/site-packages/transformers/trainer.py", line 1565, in _maybe_log_save_evaluate
+    metrics = self.evaluate(ignore_keys=ignore_keys_for_eval)
+  File "/opt/conda/lib/python3.8/site-packages/transformers/trainer.py", line 2208, in evaluate
+    output = eval_loop(
+  File "/opt/conda/lib/python3.8/site-packages/transformers/trainer.py", line 2394, in evaluation_loop
+    preds_host = logits if preds_host is None else nested_concat(preds_host, logits, padding_index=-100)
+  File "/opt/conda/lib/python3.8/site-packages/transformers/trainer_pt_utils.py", line 108, in nested_concat
+    return torch_pad_and_concatenate(tensors, new_tensors, padding_index=padding_index)
+  File "/opt/conda/lib/python3.8/site-packages/transformers/trainer_pt_utils.py", line 70, in torch_pad_and_concatenate
+    return torch.cat((tensor1, tensor2), dim=0)
+RuntimeError: CUDA out of memory. Tried to allocate 5.36 GiB (GPU 0; 14.76 GiB total capacity; 7.25 GiB already allocated; 4.74 GiB free; 8.60 GiB reserved in total by PyTorch)
