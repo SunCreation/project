@@ -4,10 +4,17 @@ from transformers import pipeline
 import tensorflow as tf
 from transformers import AutoTokenizer
 from transformers import TFGPT2LMHeadModel
+# from tensorflow.compat.v1 import ConfigProto
+# from numba import cuda
 
 tokenizer = AutoTokenizer.from_pretrained('skt/kogpt2-base-v2', bos_token='</s>', eos_token='</s>', pad_token='<pad>')
 model = TFGPT2LMHeadModel.from_pretrained('skt/kogpt2-base-v2', from_pt=True)
 from core import LearningRateScheduler
+
+
+# config = ConfigProto()
+# config.gpu_options.allow_growth = True
+
 
 
 inputs = tokenizer("예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱", return_tensors="tf")
@@ -44,7 +51,8 @@ for batch in dataset:
 
 print(tokenizer.decode(batch[0]))
 
-learning_rate=LearningRateScheduler(768)
+
+learning_rate=LearningRateScheduler(768, 400)
 adam = tf.keras.optimizers.Adam(learning_rate, epsilon=1e-08)
 
 steps = len(train_data) // BATCH_SIZE + 1
@@ -113,6 +121,7 @@ while fit:
             epoch_loss += batch_loss
             t.set_description_str('Epoch %2d' % (epoch + 1))    
             t.set_postfix_str('Loss %.4f' % (epoch_loss / (batch + 1)))
+            # cuda.close()
 
     for i in test_data["problem"][:5]:
         print(i)

@@ -2,8 +2,7 @@ import os
 from os import path
 import transformers
 import torch
-import numpy
-# import wandb
+import wandb
 from transformers import (
     AutoTokenizer, 
     GPT2LMHeadModel,
@@ -29,35 +28,49 @@ def prepare_train_features(examples):
 metric = load_metric("accuracy")
 
 def compute_metrics(eval_pred):
-    logits, labels, dasdas = eval_pred
-    print(logits, labels)
-    predictions = np.argmax(logits, axis=-1)
-    return metric.compute(predictions=predictions, references=labels)
+    logits, labels = eval_pred # , dasdas
+    print(logits.shape)
+    # print(logits, labels)
+    predictions = np.argmax(logits[0], axis=-1)
+    return metric.compute(predictions=predictions, references=labels[0])
 
-# wandb.init(project="kogpt2-pretrained-baseline", entity="math-solver")
+
+
+# answer = []
+# def compute_metrics(eval_pred):
+#     output = []
+#     logits, labels = eval_pred # , dasdas
+#     # print(logits, labels)
+#     predictions = np.argmax(logits[0], axis=-1)
+#     for i in predictions:
+#         output.append(code_exec(tokenizer.decode~~(i)))
+#     return metric.compute(predictions=output, references=labels[0])
+
+
+wandb.init(project="kogpt2-pretrained-baseline", entity="suncreation")
 
 tokenizer = AutoTokenizer.from_pretrained('skt/kogpt2-base-v2', bos_token='</s>', sep_token='<sep>', eos_token='</s>', pad_token='<pad>')
 model = GPT2LMHeadModel.from_pretrained('skt/kogpt2-base-v2')
 
 dataset = load_dataset('csv', data_files='../../CloudData/math/data/train.csv', split='train')
 
-dictdataset = dataset.train_test_split(0.1)
+dictdataset = dataset.train_test_split(0.03)
 
-tokenizer.decode(prepare_train_features(dictdataset['train'][0])['input_ids'])
+# tokenizer.decode(prepare_train_features(dictdataset['train'][0])['input_ids'])
 
 tokenized_datasets = dictdataset.map(prepare_train_features, batched=True, remove_columns=dictdataset["train"].column_names)
 
 args = TrainingArguments(
     output_dir='kogpt-finetune',
     overwrite_output_dir = True,
-    per_device_train_batch_size=8,
+    per_device_train_batch_size=16,
     per_device_eval_batch_size=1,
-    num_train_epochs = 1,
+    num_train_epochs = 10,
     logging_strategy='epoch',
     save_strategy = 'epoch',
     evaluation_strategy = 'epoch',
     load_best_model_at_end = True,
-    # report_to="wandb"
+    report_to="wandb"
 )
 
 trainer = Trainer(
@@ -65,14 +78,15 @@ trainer = Trainer(
     args,
     train_dataset=tokenized_datasets['train'],
     eval_dataset=tokenized_datasets['test'],
-    compute_metrics=compute_metrics
+    compute_metrics=compute_metrics,
+    # do_eval=False
     # data_collator=data_collator,
 )
 
-output = trainer.train()
+# output = 
+trainer.train()
 
-print(help(trainer.save_model))
-
+# print(help(trainer.save_model))
 # answer = input("저장 고?")
 # if answer=="N": exit()
 
@@ -98,7 +112,7 @@ def solve_problem(problem):
         print('error')
     print("")
 
-test = pd.read_csv('KMWP/data/test.csv')
+test = pd.read_csv('../../KMWP/data/test.csv')
 
 import random
 
