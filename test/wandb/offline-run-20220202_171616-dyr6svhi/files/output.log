@@ -1,0 +1,71 @@
+Downloading and preparing dataset csv/default to /root/.cache/huggingface/datasets/csv/default-c30907fc16e79295/0.0.0/6b9057d9e23d9d8a2f05b985917a0da84d70c5dae3d22ddd8a3f22fb01c69d9e...
+Dataset csv downloaded and prepared to /root/.cache/huggingface/datasets/csv/default-c30907fc16e79295/0.0.0/6b9057d9e23d9d8a2f05b985917a0da84d70c5dae3d22ddd8a3f22fb01c69d9e. Subsequent calls will reuse this data.
+1부터 9까지의 자연수 중에서 64을 나누어 떨어지게 하는 수를 모두 구해 더해 보세요. 15<pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+{'loss': 0.5805, 'learning_rate': 3.3333333333333335e-05, 'epoch': 1.0}
+(85, 216, 51200)
+{'eval_loss': 0.2997342050075531, 'eval_accuracy': 0.8842592592592593, 'eval_runtime': 10.879, 'eval_samples_per_second': 7.813, 'eval_steps_per_second': 7.813, 'epoch': 1.0}
+{'loss': 0.2704, 'learning_rate': 1.6666666666666667e-05, 'epoch': 2.0}
+(85, 216, 51200)
+{'eval_loss': 0.27336207032203674, 'eval_accuracy': 0.8842592592592593, 'eval_runtime': 7.1091, 'eval_samples_per_second': 11.956, 'eval_steps_per_second': 11.956, 'epoch': 2.0}
+{'loss': 0.2204, 'learning_rate': 0.0, 'epoch': 3.0}
+(85, 216, 51200)
+{'eval_loss': 0.2644340395927429, 'eval_accuracy': 0.8842592592592593, 'eval_runtime': 7.2752, 'eval_samples_per_second': 11.684, 'eval_steps_per_second': 11.684, 'epoch': 3.0}
+{'train_runtime': 581.2401, 'train_samples_per_second': 14.116, 'train_steps_per_second': 0.883, 'train_loss': 0.3570734585470159, 'epoch': 3.0}
+4 x A = 608 일 때, A에 알맞은 수를 구하세요.
+=====
+9
+실행결과:
+두 수 A, B의 합은 63이고 차는 3입니다. 두 수 A, B의 곱을 구하시오.
+=====
+9
+실행결과:
+어떤 직육면체의 가로의 길이가 6cm, 세로의 길이가 4cm, 높이가 8cm입니다. 이 직육면체의 전체 둘레는 얼마일까요?
+=====
+56
+실행결과:
+네 변의 길이의 합이 88cm인 정사각형의 한 변의 길이는 몇 cm인가요?
+=====
+실행결과:
+들이가 4L인 물병을 상우는 약 3L 200mL, 서형이는 약 3L 750mL로 어림하였습니다. 실제 들이에 더 가깝게 어림한 사람은 누구일까요?
+=====
+실행결과:
+Downloading: 100%|███████████████████████████| 0.98k/0.98k [00:00<00:00, 663kB/s]
+Downloading: 100%|██████████████████████████| 2.69M/2.69M [00:01<00:00, 2.27MB/s]
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Downloading: 100%|████████████████████████████| 490M/490M [00:05<00:00, 94.8MB/s]
+Using custom data configuration default-c30907fc16e79295
+100%|████████████████████████████████████████████| 1/1 [00:00<00:00, 6563.86it/s]
+100%|█████████████████████████████████████████████| 1/1 [00:00<00:00, 948.08it/s]
+100%|██████████████████████████████████████████████| 3/3 [00:00<00:00,  6.60ba/s]
+100%|██████████████████████████████████████████████| 1/1 [00:00<00:00, 50.26ba/s]
+/opt/conda/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use thePyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+***** Running training *****
+  Num examples = 2735
+  Num Epochs = 3
+  Instantaneous batch size per device = 16
+  Total train batch size (w. parallel, distributed & accumulation) = 16
+  Gradient Accumulation steps = 1
+  Total optimization steps = 513
+Automatic Weights & Biases logging enabled, to disable set os.environ["WANDB_DISABLED"] = "true"
+ 33%|██████████████                            | 171/513 [02:43<05:34,  1.02it/s]***** Running Evaluation *****
+  Num examples = 85
+  Batch size = 1
+ 33%|██████████████                            | 171/513 [02:54<05:34,  1.02it/s]Saving model checkpoint to kogpt-finetune/checkpoint-171
+Configuration saved in kogpt-finetune/checkpoint-171/config.json
+Model weights saved in kogpt-finetune/checkpoint-171/pytorch_model.bin
+ 67%|████████████████████████████              | 342/513 [06:03<02:49,  1.01it/s]***** Running Evaluation *****
+  Num examples = 85
+  Batch size = 1
+ 67%|████████████████████████████              | 342/513 [06:10<02:49,  1.01it/s]Saving model checkpoint to kogpt-finetune/checkpoint-342
+Configuration saved in kogpt-finetune/checkpoint-342/config.json
+Model weights saved in kogpt-finetune/checkpoint-342/pytorch_model.bin
+100%|██████████████████████████████████████████| 513/513 [09:19<00:00,  1.01it/s]***** Running Evaluation *****
+  Num examples = 85
+  Batch size = 1
+100%|██████████████████████████████████████████| 513/513 [09:26<00:00,  1.01it/s]Saving model checkpoint to kogpt-finetune/checkpoint-513
+Configuration saved in kogpt-finetune/checkpoint-513/config.json
+Model weights saved in kogpt-finetune/checkpoint-513/pytorch_model.bin
+Training completed. Do not forget to share your model on huggingface.co/models =)
+Loading best model from kogpt-finetune/checkpoint-513 (score: 0.2644340395927429).
+100%|██████████████████████████████████████████| 513/513 [09:41<00:00,  1.13s/it]

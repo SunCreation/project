@@ -17,7 +17,7 @@ from core import LearningRateScheduler
 
 
 
-inputs = tokenizer("예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱예진님 짱짱", return_tensors="tf")
+inputs = tokenizer("짱짱", return_tensors="tf")
 sample = tokenizer.tokenize("예진님 짱짱")
 outputs = model(inputs)
 print(model.config)
@@ -113,6 +113,7 @@ while fit:
                 now = next(nowdata)
                 result = model(now, labels = now)
                 loss = result[0]
+                
                 # print(help(result))
                 batch_loss = tf.reduce_mean(loss)
             

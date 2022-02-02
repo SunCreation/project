@@ -1,0 +1,29 @@
+
+{'input_ids': [9975, 7791, 10799, 11671, 40092, 9873, 9228, 16503, 9240, 10583, 11025, 22553, 8191, 21154, 14109, 18721, 14002, 9308, 25729, 14002, 10887, 12174, 8191, 8149, 9068, 12646, 9240, 10583, 9774, 8191, 8149, 6969, 8084, 406, 13612, 18124, 18721, 375, 440, 18124, 25729, 375, 441, 18124, 12174, 375, 442, 18124, 22553, 375, 443, 18124, 41741, 463, 18124, 10477, 10340, 16901, 9571, 9440, 439, 16840, 13726, 16840, 11925, 10932, 454, 24812, 458, 383, 24813, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3], 'attention_mask': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'labels': [9975, 7791, 10799, 11671, 40092, 9873, 9228, 16503, 9240, 10583, 11025, 22553, 8191, 21154, 14109, 18721, 14002, 9308, 25729, 14002, 10887, 12174, 8191, 8149, 9068, 12646, 9240, 10583, 9774, 8191, 8149, 6969, 8084, 406, 13612, 18124, 18721, 375, 440, 18124, 25729, 375, 441, 18124, 12174, 375, 442, 18124, 22553, 375, 443, 18124, 41741, 463, 18124, 10477, 10340, 16901, 9571, 9440, 439, 16840, 13726, 16840, 11925, 10932, 454, 24812, 458, 383, 24813, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]}
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Using custom data configuration default-c30907fc16e79295
+Reusing dataset csv (/root/.cache/huggingface/datasets/csv/default-c30907fc16e79295/0.0.0/6b9057d9e23d9d8a2f05b985917a0da84d70c5dae3d22ddd8a3f22fb01c69d9e)
+100%|████████████████████| 3/3 [00:00<00:00,  5.05ba/s]
+100%|████████████████████| 1/1 [00:00<00:00, 33.60ba/s]
+/opt/conda/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use thePyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+***** Running training *****
+  Num examples = 2735
+  Num Epochs = 10
+  Instantaneous batch size per device = 16
+  Total train batch size (w. parallel, distributed & accumulation) = 16
+  Gradient Accumulation steps = 1
+  Total optimization steps = 1710
+Automatic Weights & Biases logging enabled, to disable set os.environ["WANDB_DISABLED"] = "true"
+  4%|▌               | 60/1710 [00:58<28:09,  1.02s/it]Traceback (most recent call last):
+  File "2test.py", line 94, in <module>
+    trainer.train()
+  File "/opt/conda/lib/python3.8/site-packages/transformers/trainer.py", line 1365, in train
+    tr_loss_step = self.training_step(model, inputs)
+  File "/opt/conda/lib/python3.8/site-packages/transformers/trainer.py", line 1958, in training_step
+    loss.backward()
+  File "/opt/conda/lib/python3.8/site-packages/torch/_tensor.py", line 255, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/opt/conda/lib/python3.8/site-packages/torch/autograd/__init__.py", line 147, in backward
+    Variable._execution_engine.run_backward(
+KeyboardInterrupt

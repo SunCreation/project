@@ -1,0 +1,29 @@
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Downloading: 100%|███████████████| 490M/490M [00:05<00:00, 91.4MB/s]
+Using custom data configuration default-c30907fc16e79295
+Reusing dataset csv (/root/.cache/huggingface/datasets/csv/default-c30907fc16e79295/0.0.0/6b9057d9e23d9d8a2f05b985917a0da84d70c5dae3d22ddd8a3f22fb01c69d9e)
+  0%|                                         | 0/3 [00:00<?, ?ba/s]
+Traceback (most recent call last):
+  File "2test.py", line 61, in <module>
+    tokenized_datasets = dictdataset.map(prepare_train_features, batched=True, remove_columns=dictdataset["train"].column_names)
+  File "/opt/conda/lib/python3.8/site-packages/datasets/dataset_dict.py", line 494, in map
+    {
+  File "/opt/conda/lib/python3.8/site-packages/datasets/dataset_dict.py", line 495, in <dictcomp>
+    k: dataset.map(
+  File "/opt/conda/lib/python3.8/site-packages/datasets/arrow_dataset.py", line 2107, in map
+    return self._map_single(
+  File "/opt/conda/lib/python3.8/site-packages/datasets/arrow_dataset.py", line 519, in wrapper
+    out: Union["Dataset", "DatasetDict"] = func(self, *args, **kwargs)
+  File "/opt/conda/lib/python3.8/site-packages/datasets/arrow_dataset.py", line 486, in wrapper
+    out: Union["Dataset", "DatasetDict"] = func(self, *args, **kwargs)
+  File "/opt/conda/lib/python3.8/site-packages/datasets/fingerprint.py", line 413, in wrapper
+    out = func(self, *args, **kwargs)
+  File "/opt/conda/lib/python3.8/site-packages/datasets/arrow_dataset.py", line 2486, in _map_single
+    batch = apply_function_on_filtered_inputs(
+  File "/opt/conda/lib/python3.8/site-packages/datasets/arrow_dataset.py", line 2372, in apply_function_on_filtered_inputs
+    processed_inputs = function(*fn_args, *additional_args, **fn_kwargs)
+  File "/opt/conda/lib/python3.8/site-packages/datasets/arrow_dataset.py", line 2067, in decorated
+    result = f(decorated_item, *args, **kwargs)
+  File "2test.py", line 20, in prepare_train_features
+    text=examples['problem'] + "<sys>",
+TypeError: can only concatenate list (not "str") to list

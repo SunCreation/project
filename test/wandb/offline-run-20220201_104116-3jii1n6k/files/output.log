@@ -1,0 +1,149 @@
+a dictionary of token to index.
+ |
+ |      Returns:
+ |          `Dict[str, int]`: The added tokens.
+ |
+ |  [1mget_vocab[22m(self) -> Dict[str, int]
+n to index.
+ |
+` is in the
+ |      vocab.
+ |
+ |      Returns:
+ |          `Dict[str, int]`: The vocabulary.
+ |
+) -> int
+ng a sequence with special tokens.
+ |
+ |      <Tip>
+ |
+ not put
+ |      this inside your training loop.
+ |
+ |      </Tip>
+ |
+ |      Args:
+se`):
+ngle
+ |              sequence.
+ |
+ |      Returns:
+equences.
+ |
+ple_of: Union[int, NoneType])
+zers
+terwards.
+ |
+nizer set a
+the managed
+ |      section.
+ |
+ |      Args:
+ategy`]):
+ed to the input
+_base.TruncationStrategy`]):
+plied to the input
+ |          max_length (`int`):
+ |              The maximum size of a sequence.
+ |          stride (`int`):
+ow.
+ |          pad_to_multiple_of (`int`, *optional*):
+to enable
+ware with compute capability >= 7.5 (Volta).
+ |
+ -> List[str]
+lacing unknown tokens with the `unk_token`.
+ |
+ |      Args:
+ |          text (`str`):
+ |              The sequence to be encoded.
+ |          pair (`str`, *optional*):
+he first.
+faults to `False`):
+ns associated with the corresponding model.
+ional*):
+[?1l>[?1049l
+Noney and
+ |      added tokens.
+ |
+ |      Args:
+ |          ids (`int` or `List[int]`):
+ to tokens.
+efaults to `False`):
+s in the decoding.
+ |
+ |      Returns:
+.
+ |
+t[str]]) -> Union[int, List[int]]
+ng the
+ |      vocabulary.
+ |
+ |      Args:
+ral token(s) to convert to token id(s).
+ |
+ |      Returns:
+ of token ids.
+ |
+-> str
+ but we
+ifacts at the same time.
+ |
+ |      Args:
+ a string.
+ |
+ |      Returns:
+ |          `str`: The joined tokens.
+ |
+ |  [1mget_added_vocab[22m(self) -> Dict[str, int]
+a dictionary of token to index.
+ |
+Mns) in a single integer id (or a sequence of ids), usi
+ |      >>> tokenizer(" Hello world")['input_ids']
+ |      [18435, 995]
+ |      ```
+ |
+r or when you
+performance.
+ |
+ |      <Tip>
+ |
+e first one).
+ |
+ |      </Tip>
+ |
+should refer to
+ those methods.
+ |
+ |      Args:
+ |          vocab_file (`str`):
+ |              Path to the vocabulary file.
+ |          merges_file (`str`):
+ |              Path to the merges file.
+eplace"`):
+ to UTF-8. See
+ation.
+`<|endoftext|>`):
+ set to be this
+ |              token instead.
+`<|endoftext|>`):
+ |              The beginning of sequence token.
+`<|endoftext|>`):
+ |              The end of sequence token.
+ults to `False`):
+ust as any
+M those methods.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Traceback (most recent call last):
+  File "2test.py", line 54, in <module>
+  File "/opt/conda/lib/python3.8/site-packages/transformers/modeling_utils.py", line 1435, in from_pretrained
+    state_dict = torch.load(resolved_archive_file, map_location="cpu")
+  File "/opt/conda/lib/python3.8/site-packages/torch/serialization.py", line 607, in load
+    return _load(opened_zipfile, map_location, pickle_module, **pickle_load_args)
+  File "/opt/conda/lib/python3.8/site-packages/torch/serialization.py", line 882, in _load
+    result = unpickler.load()
+  File "/opt/conda/lib/python3.8/site-packages/torch/serialization.py", line 857, in persistent_load
+    load_tensor(data_type, size, key, _maybe_decode_ascii(location))
+  File "/opt/conda/lib/python3.8/site-packages/torch/serialization.py", line 845, in load_tensor
+    storage = zip_file.get_storage_from_record(name, size, dtype).storage()
+KeyboardInterrupt

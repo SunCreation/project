@@ -1,0 +1,85 @@
+[?1l>[?1049l
+None        text_iterator (generator of `List[str]`):
+ches of texts, for instance a list of lists of texts
+ |              if you have everything in memory.
+ |          vocab_size (`int`):
+nizer.
+ptional*):
+zer you are training.
+ |          special_tokens_map (`Dict[str, str]`, *optional*):
+this tokenizer uses, pass along a mapping old special
+ment.
+ |          kwargs:
+trainer from the 🤗 Tokenizers library.
+ |
+ |      Returns:
+ame type as the original one, trained on
+ |          `text_iterator`.
+ |
+---------
+utils_fast.PreTrainedTokenizerFast:
+ |
+ |  [1mbackend_tokenizer
+nizer used as a backend.
+ |
+ |  [1mdecoder
+tokenizer.
+ |
+ |  [1mis_fast
+ |
+ |  [1mvocab
+ |
+ |  [1mvocab_size
+ens).
+ |
+---------
+ation_utils_fast.PreTrainedTokenizerFast:
+ |
+ 'slow_to...
+ |
+ |  [1mcan_save_slow_tokenizer[22m = True
+ |
+---------
+M |
+  |              - `'max_length'`: Pad to a maximum length specified with the argument `max_length` or to the maximum
+ |                acceptable input length for the model if that argument is not provided.
+ |              - `False` or `'do_not_pad'` (default): No padding (i.e., can output a batch with sequences of different
+ |                lengths).
+ |          truncation (`bool`, `str` or [`~tokenization_utils_base.TruncationStrategy`], *optional*, defaults to `False`):
+ |              Activates and controls truncation. Accepts the following values:
+ |
+ |              - `True` or `'longest_first'`: Truncate to a maximum length specified with the argument `max_length` or
+ |                to the maximum acceptable input length for the model if that argument is not provided. This will
+ |                truncate token by token, removing a token from the longest sequence in the pair if a pair of
+ |                sequences (or a batch of pairs) is provided.
+ |              - `'only_first'`: Truncate to a maximum length specified with the argument `max_length` or to the
+ |                maximum acceptable input length for the model if that argument is not provided. This will only
+ |                truncate the first sequence of a pair if a pair of sequences (or a batch of pairs) is provided.
+ |              - `'only_second'`: Truncate to a maximum length specified with the argument `max_length` or to the
+ |                maximum acceptable input length for the model if that argument is not provided. This will only
+ |                truncate the second sequence of a pair if a pair of sequences (or a batch of pairs) is provided.
+ |              - `False` or `'do_not_truncate'` (default): No truncation (i.e., can output batch with sequence lengths
+M |              - `'max_length'`: Pad to a maximum length specifi
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Traceback (most recent call last):
+  File "2test.py", line 60, in <module>
+    model = GPT2LMHeadModel.from_pretrained('skt/kogpt2-base-v2')
+  File "/opt/conda/lib/python3.8/site-packages/transformers/modeling_utils.py", line 1489, in from_pretrained
+    model = cls(config, *model_args, **model_kwargs)
+  File "/opt/conda/lib/python3.8/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 951, in __init__
+    self.transformer = GPT2Model(config)
+  File "/opt/conda/lib/python3.8/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 680, in __init__
+    self.h = nn.ModuleList([GPT2Block(config, layer_idx=i) for i in range(config.num_hidden_layers)])
+  File "/opt/conda/lib/python3.8/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 680, in <listcomp>
+    self.h = nn.ModuleList([GPT2Block(config, layer_idx=i) for i in range(config.num_hidden_layers)])
+  File "/opt/conda/lib/python3.8/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 380, in __init__
+    self.mlp = GPT2MLP(inner_dim, config)
+  File "/opt/conda/lib/python3.8/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 353, in __init__
+    self.c_fc = Conv1D(intermediate_size, embed_dim)
+  File "/opt/conda/lib/python3.8/site-packages/transformers/modeling_utils.py", line 1831, in __init__
+    nn.init.normal_(w, std=0.02)
+  File "/opt/conda/lib/python3.8/site-packages/torch/nn/init.py", line 151, in normal_
+    return _no_grad_normal_(tensor, mean, std)
+  File "/opt/conda/lib/python3.8/site-packages/torch/nn/init.py", line 19, in _no_grad_normal_
+    return tensor.normal_(mean, std)
+KeyboardInterrupt
