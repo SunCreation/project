@@ -23,6 +23,8 @@ np.random.seed(42)
 random.seed(42) 
 torch.cuda.manual_seed_all(42)
 
+homedir = input("Home DIR: ")
+
 
 
 def prepare_train_features(examples):
@@ -77,8 +79,8 @@ tokenizer = AutoTokenizer.from_pretrained('skt/kogpt2-base-v2', bos_token='</s>'
 
 model = GPT2LMHeadModel.from_pretrained('skt/kogpt2-base-v2')
 
-dataset = load_dataset('csv', data_files='../../CloudData/math/data/Agu_bin_train.csv', split='train')
-valdataset = load_dataset('csv', data_files='../../CloudData/math/data/Val_bin_train.csv', split='train')
+dataset = load_dataset('csv', data_files=f'{homedir}/CloudData/math/data/Agu_bin_train.csv', split='train')
+valdataset = load_dataset('csv', data_files=f'{homedir}/CloudData/math/data/Val_bin_train.csv', split='train')
 # dictdataset = dataset.train_test_split(0.015)
 
 
@@ -132,7 +134,7 @@ def solve_problem(problem):
         print('error')
     print("")
 
-test = pd.read_csv('../../KMWP/data/test.csv')
+test = pd.read_csv(f'{homedir}/CloudData/data/test.csv')
 
 import random
 
