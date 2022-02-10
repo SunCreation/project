@@ -134,7 +134,7 @@ def solve_problem(problem):
         print('error')
     print("")
 
-test = pd.read_csv(f'{homedir}/CloudData/data/test.csv')
+test = pd.read_csv(f'{homedir}/CloudData/math/data/test.csv')
 
 import random
 
